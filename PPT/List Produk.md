@@ -4,6 +4,7 @@ See Changelog [here][changelog_url] (Always Updated)
 
 ### Infrastructure
 Hypervisor: Linux KVM (Fedora/CentOS)
+
 Backup Hypervisor: Apache OpenStack (KVM)
 
 ### Product
