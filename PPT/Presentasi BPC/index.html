@@ -44,7 +44,7 @@
             </section>
 
             <!--slide-2-->
-            <section>
+            <section data-transition="slide">
                 <p class="rm-p-title">
                     What is
                     <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>?
@@ -52,12 +52,12 @@
             </section>
 
             <!--slide-3-->
-            <section>
+            <section data-transition="slide">
                 <p class="rm-p-title">Who is <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>'s target?</p>
             </section>
 
             <!--slide-4-->
-            <section>
+            <section data-transition="slide">
                 <section>
                     <p class="rm-p-title">Why choose <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>?</p>
                 </section>
@@ -73,8 +73,34 @@
             </section>
 
             <!--slide-5-->
-            <section>
+            <section data-transition="slide">
+                <section>
+                    <p class="rm-p-title">Finance Plan</p>
+                </section>
 
+                <section>
+                    <img src="assets/images/growth_chart.png" alt="growth_chart" width="800" height="600">
+                </section>
+
+                <section>
+                    <img src="assets/images/BEP_chart.png" alt="growth_chart" width="800" height="600">
+                </section>
+            </section>
+
+            <!--slide-6-->
+            <section data-transition="slide">
+                <div id="typed-strings">
+                    <p class="rm-p-title">Terima Kasih</p>
+                    <p class="rm-p-title">Thank You</p>
+                    <p class="rm-p-title">谢谢</p>
+                    <p class="rm-p-title">ありがとうございました</p>
+                    <p class="rm-p-title">고맙습니다</p>
+                    <p class="rm-p-title">gracias</p>
+                    <p class="rm-p-title">شكرا</p>
+                    <p class="rm-p-title">Je vous remercie</p>
+                    <p class="rm-p-title">Спасибо</p>
+                </div>
+                <span id="typed" style="white-space:pre;"></span>
             </section>
 
         </div>
@@ -84,6 +110,7 @@
     <script src="external_addons/reveal.js/lib/js/head.min.js"></script>
     <script src="external_addons/reveal.js/js/reveal.js"></script>
     <script src="external_addons/canvas-particle-network/particle-network.min.js"></script>
+    <script src="external_addons/typed.js/dist/typed.min.js"></script>
 
     <script>
         // More info https://github.com/hakimel/reveal.js#configuration
@@ -124,6 +151,25 @@
             density: 'high'
         };
         var particleCanvas = new ParticleNetwork(canvasDiv, options);
+
+        $(function() {
+
+            $("#typed").typed({
+                // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                stringsElement: $('#typed-strings'),
+                typeSpeed: 60,
+                backDelay: 500,
+                loop: true,
+                contentType: 'html', // or text
+                // defaults to false for infinite loop
+                loopCount: false
+            });
+
+            $(".reset").click(function() {
+                $("#typed").typed('reset');
+            });
+
+        });
     </script>
 </body>
 
