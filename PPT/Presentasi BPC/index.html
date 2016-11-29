@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="BEC Presentation">
+    <meta name="author" content="Jeffry Angtoni">
+
+    <title>RouterMaya</title>
+
+    <link rel="shortcut icon" href="assets/images/RouterMaya.png">
+
+    <link rel="stylesheet" href="external_addons/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="external_addons/reveal.js/css/theme/black.css">
+
+    <!--custom style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="external_addons/reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'external_addons/reveal.js/css/print/pdf.css' : 'external_addons/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!--slide-1-->
+            <section>
+                <img src="assets/images/RouterMaya_white.png" alt="routermaya_logo">
+                <h1>
+                    <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>
+                </h1>
+                <small>by @jeffryang24</small>
+            </section>
+
+            <!--slide-2-->
+            <section>
+                <p class="rm-p-title">
+                    What is
+                    <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>?
+                </p>
+            </section>
+
+            <!--slide-3-->
+            <section>
+                <p class="rm-p-title">Who is <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>'s target?</p>
+            </section>
+
+            <!--slide-4-->
+            <section>
+                <section>
+                    <p class="rm-p-title">Why choose <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>?</p>
+                </section>
+
+                <section>
+                    <ul class="rm-p-1-4">
+                        <li>Fast</li>
+                        <li class="fragment">Secure</li>
+                        <li class="fragment">Zero Downtime</li>
+                        <li class="fragment">Multi OS Images</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!--slide-5-->
+            <section>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script src="external_addons/reveal.js/lib/js/head.min.js"></script>
+    <script src="external_addons/reveal.js/js/reveal.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'external_addons/reveal.js/plugin/markdown/marked.js'
+            }, {
+                src: 'external_addons/reveal.js/plugin/markdown/markdown.js'
+            }, {
+                src: 'external_addons/reveal.js/plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'external_addons/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+    </script>
+</body>
+
+</html>

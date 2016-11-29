@@ -1,0 +1,28 @@
+{
+    "name": "Presentasi BPC",
+    "homepage": "https://github.com/jeffryang24/RouterMaya",
+    "authors": [
+        "Jeffry Angtoni <jeffryangtoni24@gmail.com>"
+    ],
+    "description": "File presentasi BPC-BEC",
+    "keywords": [
+        "BEC"
+    ],
+    "main": [
+        "js/reveal.js",
+        "css/reveal.css"
+    ],
+    "license": "MIT",
+    "private": true,
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "external_addons",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "reveal.js": "^3.3.0"
+    }
+}
