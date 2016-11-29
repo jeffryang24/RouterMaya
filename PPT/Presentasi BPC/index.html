@@ -25,12 +25,13 @@
         var link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = window.location.search.match(/print-pdf/gi) ? 'external_addons/reveal.js/css/print/pdf.css' : 'external_addons/reveal.js/css/print/paper.css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'external_addons/reveal.js/css/print/pdf.custom.css' : 'external_addons/reveal.js/css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
 </head>
 
 <body>
+    <div id="particle-canvas"></div>
     <div class="reveal">
         <div class="slides">
             <!--slide-1-->
@@ -79,8 +80,10 @@
         </div>
     </div>
 
+    <script src="external_addons/jquery/dist/jquery.min.js"></script>
     <script src="external_addons/reveal.js/lib/js/head.min.js"></script>
     <script src="external_addons/reveal.js/js/reveal.js"></script>
+    <script src="external_addons/canvas-particle-network/particle-network.min.js"></script>
 
     <script>
         // More info https://github.com/hakimel/reveal.js#configuration
@@ -103,6 +106,24 @@
                 }
             }]
         });
+
+        Reveal.addEventListener('overviewshown', function(event) {
+            $('#particle-canvas').hide();
+        });
+
+        Reveal.addEventListener('overviewhidden', function(event) {
+            $('#particle-canvas').show();
+        });
+
+        var canvasDiv = document.getElementById('particle-canvas');
+        var options = {
+            particleColor: '#888',
+            background: '#000',
+            interactive: false,
+            speed: 'medium',
+            density: 'high'
+        };
+        var particleCanvas = new ParticleNetwork(canvasDiv, options);
     </script>
 </body>
 
