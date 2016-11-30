@@ -1,0 +1,91 @@
+body {
+    color: rgba(255, 255, 255, 0.88)
+}
+
+.gtco-nav ul li.active>a {
+    color: rgb(22, 152, 246) !important;
+}
+
+.gtco-nav ul li a {
+    color: rgba(22, 152, 246, 0.5) !important;
+}
+
+.gtco-nav ul li a:hover,
+.gtco-nav ul li a:focus,
+.gtco-nav ul li a:active {
+    color: rgb(22, 152, 246) !important;
+    ;
+}
+
+.gtco-cover a {
+    color: rgb(22, 152, 246) !important;
+}
+
+.gtco-cover a:hover {
+    color: rgba(22, 152, 246, 0.5) !important;
+}
+
+.gtco-cover .overlay {
+    background: none !important;
+    position: absolute !important;
+}
+
+#page {
+    background: url('../images/black_twill.png') repeat center;
+    background-attachment: fixed;
+}
+
+#gtco-features-3 .feature,
+#gtco-features-3 .feature.feature-2 .icon {
+    background: rgb(66, 171, 246) none repeat scroll 0 0;
+}
+
+#gtco-features-3 .feature.feature-2,
+#gtco-features-3 .feature.feature-2::before,
+#gtco-features-3 .feature.feature-2::after,
+#gtco-features-3 .feature.feature-3 .icon {
+    background: rgb(6, 145, 243) none repeat scroll 0 0;
+}
+
+#gtco-features-3 .feature.feature-3,
+#gtco-features-3 .feature.feature-3::before,
+#gtco-features-3 .feature.feature-3::after,
+#gtco-features-3 .feature .icon {
+    background: rgb(2, 102, 172) none repeat scroll 0 0
+}
+
+.gtco-heading h2,
+.gtco-heading p,
+.feature-center h3 {
+    color: white;
+}
+
+.feature-center .icon i,
+#gtco-counter .counter {
+    color: rgb(22, 152, 246) !important;
+}
+
+.gtco-heading h2::before {
+    background: rgb(22, 152, 246) !important;
+}
+
+#gtco-subscribe .btn {
+    background: rgb(6, 145, 243) none repeat scroll 0 0;
+}
+
+#gtco-footer .gtco-footer-links li,
+#gtco-footer .gtco-widget .gtco-quick-contact li {
+    color: rgb(6, 145, 243) none repeat scroll 0 0;
+}
+
+.gtco-nav .gtco-contact ul li a i {
+    color: rgb(6, 145, 243) !important;
+}
+
+a {
+    color: rgb(6, 145, 243) !important;
+}
+
+#gtco-counter .counter-label {
+    color: white;
+}

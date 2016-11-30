@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="BEC Presentation">
+    <meta name="author" content="Jeffry Angtoni">
+
+    <title>RouterMaya</title>
+
+    <link rel="shortcut icon" href="assets/images/RouterMaya.png">
+
+    <link rel="stylesheet" href="external_addons/reveal.js/css/reveal.css">
+    <link rel="stylesheet" href="external_addons/reveal.js/css/theme/black.css">
+
+    <!--custom style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="external_addons/reveal.js/lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'external_addons/reveal.js/css/print/pdf.custom.css' : 'external_addons/reveal.js/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+
+<body>
+    <div id="particle-canvas"></div>
+    <div class="reveal">
+        <div class="slides">
+            <!--slide-1-->
+            <section>
+                <img src="assets/images/RouterMaya_white.png" alt="routermaya_logo">
+                <h1>
+                    <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>
+                </h1>
+                <small>by @jeffryang24</small>
+            </section>
+
+            <!--slide-2-->
+            <section data-transition="slide">
+                <p class="rm-p-title">
+                    What is
+                    <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>?
+                </p>
+            </section>
+
+            <!--slide-3-->
+            <section data-transition="slide">
+                <p class="rm-p-title">Who is <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>'s target?</p>
+            </section>
+
+            <!--slide-4-->
+            <section data-transition="slide">
+                <section>
+                    <p class="rm-p-title">Why choose <span class="rm-lblue">Router<span class="rm-orange">Maya</span></span>?</p>
+                </section>
+
+                <section>
+                    <ul class="rm-p-1-4">
+                        <li>Fast</li>
+                        <li class="fragment">Secure</li>
+                        <li class="fragment">Zero Downtime</li>
+                        <li class="fragment">Multi OS Images</li>
+                    </ul>
+                </section>
+            </section>
+
+            <!--slide-5-->
+            <section data-transition="slide">
+                <section>
+                    <p class="rm-p-title">Finance Plan</p>
+                </section>
+
+                <section>
+                    <img src="assets/images/growth_chart.png" alt="growth_chart" width="800" height="600">
+                </section>
+
+                <section>
+                    <img src="assets/images/BEP_chart.png" alt="growth_chart" width="800" height="600">
+                </section>
+            </section>
+
+            <!--slide-6-->
+            <section data-transition="slide">
+                <p class="rm-p-title">Prototype</p>
+                <a href="Prototype/index.html">Homepage</a>
+            </section>
+
+            <!--slide-7-->
+            <section data-transition="slide">
+                <div id="typed-strings">
+                    <p class="rm-p-title">Terima Kasih</p>
+                    <p class="rm-p-title">Thank You</p>
+                    <p class="rm-p-title">谢谢</p>
+                    <p class="rm-p-title">ありがとうございました</p>
+                    <p class="rm-p-title">고맙습니다</p>
+                    <p class="rm-p-title">gracias</p>
+                    <p class="rm-p-title">شكرا</p>
+                    <p class="rm-p-title">Je vous remercie</p>
+                    <p class="rm-p-title">Спасибо</p>
+                </div>
+                <span id="typed" style="white-space:pre;"></span>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="external_addons/jquery/dist/jquery.min.js"></script>
+    <script src="external_addons/reveal.js/lib/js/head.min.js"></script>
+    <script src="external_addons/reveal.js/js/reveal.js"></script>
+    <script src="external_addons/canvas-particle-network/particle-network.min.js"></script>
+    <script src="external_addons/typed.js/dist/typed.min.js"></script>
+
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            history: true,
+
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                src: 'external_addons/reveal.js/plugin/markdown/marked.js'
+            }, {
+                src: 'external_addons/reveal.js/plugin/markdown/markdown.js'
+            }, {
+                src: 'external_addons/reveal.js/plugin/notes/notes.js',
+                async: true
+            }, {
+                src: 'external_addons/reveal.js/plugin/highlight/highlight.js',
+                async: true,
+                callback: function() {
+                    hljs.initHighlightingOnLoad();
+                }
+            }]
+        });
+
+        Reveal.addEventListener('overviewshown', function(event) {
+            $('#particle-canvas').hide();
+        });
+
+        Reveal.addEventListener('overviewhidden', function(event) {
+            $('#particle-canvas').show();
+        });
+
+        var canvasDiv = document.getElementById('particle-canvas');
+        var options = {
+            particleColor: '#888',
+            background: '#000',
+            interactive: false,
+            speed: 'medium',
+            density: 'high'
+        };
+        var particleCanvas = new ParticleNetwork(canvasDiv, options);
+
+        $(function() {
+
+            $("#typed").typed({
+                // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                stringsElement: $('#typed-strings'),
+                typeSpeed: 80,
+                backDelay: 500,
+                loop: true,
+                contentType: 'html', // or text
+                // defaults to false for infinite loop
+                loopCount: false
+            });
+
+            $(".reset").click(function() {
+                $("#typed").typed('reset');
+            });
+
+        });
+    </script>
+</body>
+
+</html>

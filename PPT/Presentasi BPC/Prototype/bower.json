@@ -1,0 +1,25 @@
+{
+  "name": "Prototype",
+  "homepage": "https://github.com/jeffryang24/RouterMaya",
+  "authors": [
+    "Jeffry Angtoni <jeffryangtoni24@gmail.com>"
+  ],
+  "description": "BCP Prototype",
+  "main": "",
+  "keywords": [
+    "prototype"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "addons",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "canvas-particle-network": "^1.5.0"
+  }
+}
