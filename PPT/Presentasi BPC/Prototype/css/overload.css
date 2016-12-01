@@ -2,18 +2,19 @@ body {
     color: rgba(255, 255, 255, 0.88)
 }
 
-.gtco-nav ul li.active>a {
+
+/*.gtco-nav ul li.active>a {
     color: rgb(22, 152, 246) !important;
 }
 
 .gtco-nav ul li a {
     color: rgba(22, 152, 246, 0.5) !important;
-}
+}*/
 
 .gtco-nav ul li a:hover,
 .gtco-nav ul li a:focus,
 .gtco-nav ul li a:active {
-    color: rgb(22, 152, 246) !important;
+    color: #fff !important;
     ;
 }
 
